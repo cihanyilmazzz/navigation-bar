@@ -1,9 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;400;600;900&display=swap');
+
 html {
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    background-color: whitesmoke;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background: whitesmoke;
+  font-family: 'Inter', sans-serif;
 }
 
+nav {
+    display: flex;
+    background-color: white;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 5px;
+    color: rgb(51, 51, 51);
+    height: 80px;
+    max-width: 100%;
+}
+#logo {
+    font-size: 1.7rem;
+    padding-left: 40px;
+    text-decoration: none;
+    color: hsl(0, 0%, 20%);
+    font-weight: 600;
+    transition: color .3s ease;
+    &:hover {
+        color: hsl(0, 0%, 40%);
+    }
+}
+.nav-right {
+    padding-right: 40px;
+}
+.nav-right a {
+    text-decoration: none;
+    color: rgb(51, 51, 51);
+    font-size: 1.2rem;
+    padding-right: 20px;
+    transition: color .3s ease;
+    &:hover {
+        color: hsl(0, 0%, 40%);
+    }
+}
+
+/* Smartphone Vertical */
+@media screen and (max-width: 600px) {
+    nav {
+      flex-direction: column;
+      align-items: flex-start;
+      height: auto;
+      padding: 10px 5%;
+    }
+    .nav-right a {
+      margin: 0 auto;
+      position: relative;
+      left: 10%;
+      font-size: 1rem;
+    }
+  }
